@@ -6,15 +6,27 @@ public class Motorino {
     private boolean isOn = false;
     private boolean alarm = true;
 
+    // Costruttore
     public Motorino(String color) {
-        this.color = color;
+        setVerniciatura(color);
     }
 
-    // Per attivare l'altifurto
+    // Per cambiare il colore del motore
+    public void setVerniciatura(String colour) {
+        this.color = colour;
+    }
+
+    // Per visualizzare di che colore e il Motorino
+    public String getVerniciatura() {
+        return this.color;
+    }
+
+    // Per cambiare lo stato dell'altifurto
     public void switchAllarme(boolean condition) {
         this.alarm = condition;
     }
 
+    // Per cambiare lo stato dell'accensione
     public void switchMotore(boolean condition) {
         this.isOn = condition;
     }
@@ -38,7 +50,7 @@ public class Motorino {
         }
         if (this.isOn == false) {
             System.out.println("Motore Spento");
-        } else if (this.isOn == false && this.alarm ) {
+        } else if (this.isOn == false && this.alarm) {
             System.out.println("Motore Spento");
             System.out.println("Allarme attivo");
         }
