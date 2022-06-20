@@ -2,23 +2,15 @@ package inheritance.garage;
 
 public class Garage {
 
-    private int maxCar=0;
-    private int maxBike = 0;
-    private int maxRugged = 0;
-
-    private int currentCar = 0;
-    private int currentBike = 0;
-    private int currentRugged = 0;
+    private int maxCar, maxBike, maxRugged;
+    private Veichle[] postiParcheggio;
 
     Garage(int maxCar, int maxBike, int maxRugged) {
         setMaxCar(maxCar);
         setMaxBike(maxBike);
         setMaxRugged(maxRugged);
+        this.postiParcheggio = new Veichle[getMax()];
     }
-    
-    private int totMax = getMax();
-    private Veichle[] postiParcheggio = new Veichle[totMax];
-    private int index = 0;
 
     public void setMaxBike(int maxBike) {
         this.maxBike = maxBike;
@@ -33,48 +25,36 @@ public class Garage {
     }
 
     public int getMax() {
-        return maxCar+maxRugged+maxBike;
+        return maxCar + maxBike + maxRugged;
     }
 
-    public Veichle addVeichle(Car veichle) {
-        if (currentCar > maxCar) {
-            System.out.println("Non ci sono più posti per le auto");
-        } else {
-            currentCar++;
-            postiParcheggio[index] = veichle;
-            index++;
-            System.out.println("Posti rimasti per le auto [" + (maxCar - currentCar) + "]");
-            System.out.println("Ticket parcheggio [" + index + "]");
+    public int addVeichle(Veichle veichle) {
+        for (int i = 0; i < postiParcheggio.length; i++) {
+            if (postiParcheggio[i] == null) {
+                postiParcheggio[i] = veichle;
+                return i;
+            }
         }
+        return -1;
+    }
+
+    public Veichle removeVeichle(int index) {
+        if (index > getMax()) {
+            return null;
+        }
+        Veichle veichle = this.postiParcheggio[index];
+        this.postiParcheggio[index] = null;
         return veichle;
     }
 
-    public Veichle addVeichle(Bike veichle) {
-        if (currentBike > maxBike) {
-            System.out.println("Non ci sono più posti per le motociclette");
-        } else {
-            currentBike++;
-            postiParcheggio[index] = veichle;
-            index++;
-            System.out.println("Posti rimasti per le moto ["+(maxBike-currentBike)+"]");
-            System.out.println("Ticket parcheggio ["+index+"]");
-        }
-        return veichle;
-    }
-
-    public Veichle addVeichle(Rugged veichle) {
-        if (currentRugged > maxRugged) {
-            System.out.println("Non ci sono più posti per i furgoni ");
-        } else {
-            currentRugged++;
-            postiParcheggio[index] = veichle;
-            index++;
-            System.out.println("Posti rimasti per i furgoni [" + (maxRugged - currentRugged) + "]");
-            System.out.println("Ticket parcheggio [" + index + "]");
+    public void garageStatus() {
+        for (Veichle veichle : this.postiParcheggio) {
+            if (veichle != null) {
+                System.out.println(veichle);
+            } else {
+                System.out.println("Il posto e' libero");
+            }
 
         }
-        return veichle;
     }
-
 }
-
