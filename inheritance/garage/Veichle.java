@@ -15,43 +15,43 @@ public abstract class Veichle {
         setCilinder(cilinder);
     }
 
-    public void setLicenze_plate(String licenze_plate) {
+    public final void setLicenze_plate(String licenze_plate) {
         this.licenze_plate = licenze_plate;
     }
 
-    public void setImmatricolateYear(int immatricolateYear) {
+    public final void setImmatricolateYear(int immatricolateYear) {
         this.immatricolateYear = immatricolateYear;
     }
 
-    public void setBrand(String brand) {
+    public final void setBrand(String brand) {
         this.brand = brand;
     }
 
-    public void setFuelType(String fuelType) {
+    public final void setFuelType(String fuelType) {
         this.fuelType = fuelType;
     }
 
-    public void setCilinder(int cilinder) {
+    public final void setCilinder(int cilinder) {
         this.cilinder = cilinder;
     }
 
-    public String getLicenze_plate() {
+    public final String getLicenze_plate() {
         return licenze_plate;
     }
 
-    public int getImmatricolateYear() {
+    public final int getImmatricolateYear() {
         return immatricolateYear;
     }
 
-    public String getBrand() {
+    public final String getBrand() {
         return brand;
     }
 
-    public String getFuelType() {
+    public final String getFuelType() {
         return fuelType;
     }
 
-    public int getCilinder() {
+    public final int getCilinder() {
         return cilinder;
     }
 
