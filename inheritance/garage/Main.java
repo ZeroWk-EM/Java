@@ -9,10 +9,7 @@ public class Main {
         Veichle cargo = new Rugged(2005, "Fiorino", "Gas", 12, 1200);
 
         System.out.println("Capienza massima ["+portosalvo.getMax()+"]");
-
-        portosalvo.addVeichle(macchina);
-        portosalvo.addVeichle(moto);
-        portosalvo.addVeichle(cargo);
+        
 
     }
 }

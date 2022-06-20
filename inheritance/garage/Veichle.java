@@ -44,4 +44,8 @@ public abstract class Veichle {
     public int getCilinder() {
         return cilinder;
     }
+
+    public abstract void accendi();
+
+    public abstract void spegni();
 }

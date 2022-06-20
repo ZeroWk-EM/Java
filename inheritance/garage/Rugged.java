@@ -22,4 +22,15 @@ public class Rugged extends Veichle {
                 + getFuelType() + "]\nCilindrata [" + getCilinder() + "]\nCapacita' di carico [" + this.cargoCapacity
                 + "] tonnellate";
     }
+
+    @Override
+    public void accendi() {
+        System.out.println("Furgone [" + getBrand() + "] acceso");
+    }
+
+    @Override
+    public void spegni() {
+        System.out.println("Furgone [" + getBrand() + "] spento");
+
+    }
 }

@@ -21,4 +21,16 @@ public class Car extends Veichle {
         return "Anno di immatricolazione [" + getImmatricolateYear() + "]\nMarca [" + getBrand() + "]\nTipo di motore ["
                 + getFuelType() + "]\nCilindrata [" + getCilinder() + "]\nNumero di porte [" + this.doors + "]";
     }
+
+    @Override
+    public void accendi() {
+        System.out.println("Auto [" + getBrand() + "] accesa");
+
+    }
+
+    @Override
+    public void spegni() {
+        System.out.println("Auto [" + getBrand() + "] spenta");
+
+    }
 }

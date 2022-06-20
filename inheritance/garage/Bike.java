@@ -25,4 +25,16 @@ public class Bike extends Veichle {
                 + getFuelType() + "]\nCilindrata [" + getCilinder() + "]\nTipo[" + this.type + "\nTipo motore ["
                 + this.timeMotor + "]";
     }
+
+    @Override
+    public void accendi() {
+        System.out.println("Motocicletta [" + getBrand() + "] accesa");
+
+    }
+
+    @Override
+    public void spegni() {
+        System.out.println("Motocicletta [" + getBrand() + "] accesa");
+
+    }
 }
