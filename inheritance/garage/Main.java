@@ -12,5 +12,8 @@ public class Main {
         System.out.println("POSTI TOTALI [" + portosalvo.getMax() + "]\n");
         portosalvo.garageStatus();
 
+        portosalvo.addVeichle(macchina);
+        portosalvo.addVeichle(moto);
+        portosalvo.addVeichle(cargo);
     }
 }
