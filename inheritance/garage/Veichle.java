@@ -6,13 +6,15 @@ public abstract class Veichle {
     private String brand;
     private String fuelType;
     private int cilinder;
+    private boolean state;
 
-    Veichle(String licenze_plate, int immatricolateYear, String brand, String fuelType, int cilinder) {
+    Veichle(String licenze_plate, int immatricolateYear, String brand, String fuelType, int cilinder, boolean instate) {
         setLicenze_plate(licenze_plate);
         setImmatricolateYear(immatricolateYear);
         setBrand(brand);
         setFuelType(fuelType);
         setCilinder(cilinder);
+        this.state = instate;
     }
 
     public final void setLicenze_plate(String licenze_plate) {
@@ -35,6 +37,10 @@ public abstract class Veichle {
         this.cilinder = cilinder;
     }
 
+    public void setState(boolean state) {
+        this.state = state;
+    }
+
     public final String getLicenze_plate() {
         return licenze_plate;
     }
@@ -55,7 +61,9 @@ public abstract class Veichle {
         return cilinder;
     }
 
-    public abstract void accendi();
+    public final boolean getState() {
+        return state;
+    }
 
-    public abstract void spegni();
+    public abstract void switchKey();
 }

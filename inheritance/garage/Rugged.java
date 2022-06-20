@@ -3,8 +3,9 @@ package inheritance.garage;
 public class Rugged extends Veichle {
     private int cargoCapacity;
 
-    Rugged(String licenze_plate,int immatricolateYear, String brand, String fuelType, int cilinder, int cargoCapacity) {
-        super(licenze_plate,immatricolateYear, brand, fuelType, cilinder);
+    Rugged(String licenze_plate, int immatricolateYear, String brand, String fuelType, int cilinder,
+            int cargoCapacity) {
+        super(licenze_plate, immatricolateYear, brand, fuelType, cilinder, false);
         setCargoCapacity(cargoCapacity);
     }
 
@@ -24,13 +25,13 @@ public class Rugged extends Veichle {
     }
 
     @Override
-    public void accendi() {
-        System.out.println("Furgone [" + getLicenze_plate() + "] acceso");
-    }
-
-    @Override
-    public void spegni() {
-        System.out.println("Furgone [" + getLicenze_plate() + "] spento");
-
+    public void switchKey() {
+        if (getState() == false) {
+            System.out.println("Furgone spento accesione in corso...");
+            setState(!getState());
+        } else {
+            System.out.println("Furgone acceso spegnimento in corso...");
+            setState(!getState());
+        }
     }
 }

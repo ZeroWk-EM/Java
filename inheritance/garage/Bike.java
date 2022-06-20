@@ -4,8 +4,9 @@ public class Bike extends Veichle {
     private String type;
     private int timeMotor;
 
-    Bike(String licenze_plate,int immatricolateYear, String brand, String fuelType, int cilinder, String type, int timeMotor) {
-        super(licenze_plate,immatricolateYear, brand, fuelType, cilinder);
+    Bike(String licenze_plate, int immatricolateYear, String brand, String fuelType, int cilinder, String type,
+            int timeMotor) {
+        super(licenze_plate, immatricolateYear, brand, fuelType, cilinder, false);
         setType(type);
         setTimeMotor(timeMotor);
     }
@@ -27,14 +28,13 @@ public class Bike extends Veichle {
     }
 
     @Override
-    public void accendi() {
-        System.out.println("Motocicletta [" + getLicenze_plate() + "] accesa");
-
-    }
-
-    @Override
-    public void spegni() {
-        System.out.println("Motocicletta [" + getLicenze_plate() + "] accesa");
-
+    public void switchKey() {
+        if (getState() == false) {
+            System.out.println("Motocicletta spenta accesione in corso...");
+            setState(!getState());
+        } else {
+            System.out.println("Motocicletta accesa spegnimento in corso...");
+            setState(!getState());
+        }
     }
 }
