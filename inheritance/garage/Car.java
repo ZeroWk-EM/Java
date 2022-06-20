@@ -25,10 +25,10 @@ public class Car extends Veichle {
     @Override
     public void switchKey() {
         if (getState() == false) {
-            System.out.println("Macchina spenta accesione in corso...");
+            System.out.println("Macchina [" + getLicenze_plate() + "] spenta accesione in corso...");
             setState(!getState());
         } else {
-            System.out.println("Macchina accesa spegnimento in corso...");
+            System.out.println("Macchina [" + getLicenze_plate() + "] accesa spegnimento in corso...");
             setState(!getState());
         }
     }

@@ -27,10 +27,10 @@ public class Rugged extends Veichle {
     @Override
     public void switchKey() {
         if (getState() == false) {
-            System.out.println("Furgone spento accesione in corso...");
+            System.out.println("Furgone [" + getLicenze_plate() + "] spento accesione in corso...");
             setState(!getState());
         } else {
-            System.out.println("Furgone acceso spegnimento in corso...");
+            System.out.println("Furgone [" + getLicenze_plate() + "] acceso spegnimento in corso...");
             setState(!getState());
         }
     }

@@ -30,10 +30,10 @@ public class Bike extends Veichle {
     @Override
     public void switchKey() {
         if (getState() == false) {
-            System.out.println("Motocicletta spenta accesione in corso...");
+            System.out.println("Motocicletta [" + getLicenze_plate() + "] spenta accesione in corso...");
             setState(!getState());
         } else {
-            System.out.println("Motocicletta accesa spegnimento in corso...");
+            System.out.println("Motocicletta [" + getLicenze_plate() + "] accesa spegnimento in corso...");
             setState(!getState());
         }
     }
