@@ -4,8 +4,8 @@ public class Bike extends Veichle {
     private String type;
     private int timeMotor;
 
-    Bike(int immatricolateYear, String brand, String fuelType, int cilinder, String type, int timeMotor) {
-        super(immatricolateYear, brand, fuelType, cilinder);
+    Bike(String licenze_plate,int immatricolateYear, String brand, String fuelType, int cilinder, String type, int timeMotor) {
+        super(licenze_plate,immatricolateYear, brand, fuelType, cilinder);
         setType(type);
         setTimeMotor(timeMotor);
     }
@@ -28,13 +28,13 @@ public class Bike extends Veichle {
 
     @Override
     public void accendi() {
-        System.out.println("Motocicletta [" + getBrand() + "] accesa");
+        System.out.println("Motocicletta [" + getLicenze_plate() + "] accesa");
 
     }
 
     @Override
     public void spegni() {
-        System.out.println("Motocicletta [" + getBrand() + "] accesa");
+        System.out.println("Motocicletta [" + getLicenze_plate() + "] accesa");
 
     }
 }

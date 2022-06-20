@@ -3,8 +3,8 @@ package inheritance.garage;
 public class Car extends Veichle {
     private int doors;
 
-    Car(int immatricolateYear, String brand, String fuelType, int cilinder, int doors) {
-        super(immatricolateYear, brand, fuelType, cilinder);
+    Car(String licenze_plate,int immatricolateYear, String brand, String fuelType, int cilinder, int doors) {
+        super(licenze_plate,immatricolateYear, brand, fuelType, cilinder);
         setDoors(doors);
     }
 
@@ -24,13 +24,13 @@ public class Car extends Veichle {
 
     @Override
     public void accendi() {
-        System.out.println("Auto [" + getBrand() + "] accesa");
+        System.out.println("Auto [" + getLicenze_plate() + "] accesa");
 
     }
 
     @Override
     public void spegni() {
-        System.out.println("Auto [" + getBrand() + "] spenta");
+        System.out.println("Auto [" + getLicenze_plate() + "] spenta");
 
     }
 }

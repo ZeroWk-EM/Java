@@ -3,8 +3,8 @@ package inheritance.garage;
 public class Rugged extends Veichle {
     private int cargoCapacity;
 
-    Rugged(int immatricolateYear, String brand, String fuelType, int cilinder, int cargoCapacity) {
-        super(immatricolateYear, brand, fuelType, cilinder);
+    Rugged(String licenze_plate,int immatricolateYear, String brand, String fuelType, int cilinder, int cargoCapacity) {
+        super(licenze_plate,immatricolateYear, brand, fuelType, cilinder);
         setCargoCapacity(cargoCapacity);
     }
 
@@ -25,12 +25,12 @@ public class Rugged extends Veichle {
 
     @Override
     public void accendi() {
-        System.out.println("Furgone [" + getBrand() + "] acceso");
+        System.out.println("Furgone [" + getLicenze_plate() + "] acceso");
     }
 
     @Override
     public void spegni() {
-        System.out.println("Furgone [" + getBrand() + "] spento");
+        System.out.println("Furgone [" + getLicenze_plate() + "] spento");
 
     }
 }
