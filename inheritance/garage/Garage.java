@@ -57,4 +57,37 @@ public class Garage {
 
         }
     }
+
+    public int countCar() {
+        int count = 0;
+        for (Veichle veichle : this.postiParcheggio) {
+            if (veichle instanceof Car) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+    public int countBike() {
+        int count = 0;
+        for (Veichle veichle : this.postiParcheggio) {
+            if (veichle instanceof Bike) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+    public int countRugged() {
+        int count = 0;
+        for (Veichle veichle : this.postiParcheggio) {
+            if (veichle instanceof Rugged) {
+                count++;
+            }
+        }
+
+        return count;
+    }
 }
