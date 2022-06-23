@@ -7,8 +7,10 @@ public class Main {
     public static void main(String[] args) {
 
         Shop unieuro = new Shop(8);
+        Shop euronic = new Shop(3);
 
-        System.out.println("Numero massimo di oggetti [" + unieuro.getLen() + "]");
+        System.out.println("Numero massimo di oggetti UNIEURO[" + unieuro.getLen() + "]");
+        System.out.println("Numero massimo di oggetti EURONICS[" + euronic.getLen() + "]");
 
         Device iphone12 = new Phone(129, "Apple", "Iphone 12", "LPDIW304L4", 2019, "IOS 14", 750.00, true, false);
         Device iphone13 = new Phone(248, "Apple", "Iphone 13", "SSDIWOQ224", 2021, "IOS 15", 845.50, false, false);
@@ -23,8 +25,8 @@ public class Main {
 
         unieuro.addProdotto(iphone12);
         unieuro.addProdotto(iphone13);
-        unieuro.addProdotto(iphone17);
-        unieuro.addProdotto(ipad);
+        euronic.addProdotto(iphone17);
+        euronic.addProdotto(ipad);
         unieuro.addProdotto(ipdaPro);
 
         unieuro.addProdotto(uncharched);
@@ -33,7 +35,7 @@ public class Main {
 
         unieuro.shopState();
 
-        System.out.println("\nOggetti totali in inventario [" + unieuro.getLen() + "]");
+        System.out.println("\nOggetti totali in inventario [" + unieuro.getProduct() + "]");
 
         System.out.println("Numero di telefoni [" + unieuro.phoneStatus() + "]");
         System.out.println("Numero di tablet [" + unieuro.tabletStatus() + "]");
@@ -41,5 +43,13 @@ public class Main {
         System.out.println("Numero di film [" + unieuro.filmStatus() + "]");
         System.out.println("Numero di cd musicali [" + unieuro.musicStatus() + "]");
 
+        euronic.shopState();
+        System.out.println("\nOggetti totali in inventario [" + euronic.getProduct() + "]");
+
+        System.out.println("Numero di telefoni [" + euronic.phoneStatus() + "]");
+        System.out.println("Numero di tablet [" + euronic.tabletStatus() + "]");
+        System.out.println("Numero di giochi [" + euronic.gameStatus() + "]");
+        System.out.println("Numero di film [" + euronic.filmStatus() + "]");
+        System.out.println("Numero di cd musicali [" + euronic.musicStatus() + "]");
     }
 }
