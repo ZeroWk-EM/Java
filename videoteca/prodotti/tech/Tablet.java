@@ -4,7 +4,7 @@ public class Tablet extends Device {
     boolean isFoldable;
 
     public Tablet(int id, String brand, String model, String serialCode, int releseYear, String osVersion,
-            double price) {
+            double price, boolean isisFoldable) {
         super(id, brand, model, serialCode, releseYear, osVersion, price);
         setFoldable(isFoldable);
     }

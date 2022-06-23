@@ -5,7 +5,7 @@ public class Phone extends Device {
     boolean isRugged;
 
     public Phone(int id, String brand, String model, String serialCode, int releseYear, String osVersion,
-            double price) {
+            double price, boolean isWaterproof, boolean isRugged) {
         super(id, brand, model, serialCode, releseYear, osVersion, price);
         setWaterproof(isWaterproof);
         setRugged(isRugged);
