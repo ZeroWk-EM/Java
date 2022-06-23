@@ -4,7 +4,7 @@ public class Music extends Media {
     private String author;
     private int numberSong;
 
-    Music(int id, String name, String genre, String author, int numberSong, int releseYear, double price) {
+    public Music(int id, String name, String genre, String author, int numberSong, int releseYear, double price) {
         super(id, name, genre, releseYear, price);
         setAuthor(author);
         setNumberSong(numberSong);
@@ -30,11 +30,11 @@ public class Music extends Media {
     @Override
     public String toString() {
         return "ID " + getId()
-                + " Nome " + getName()
-                + " Genere " + getGenre()
-                + " Autore " + author
-                + " Numero di canzoni" + numberSong
-                + " Anno di uscita " + getReleseYear()
-                + " Prezzo " + getPrice();
+                + "\nNome " + getName()
+                + "\nGenere " + getGenre()
+                + "\nAutore " + author
+                + "\nNumero di canzoni" + numberSong
+                + "\nAnno di uscita " + getReleseYear()
+                + "\nPrezzo " + getPrice();
     }
 }

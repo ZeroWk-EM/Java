@@ -23,11 +23,11 @@ public class Phone extends Device {
     public String toString() {
         return "ID" + getId()
                 + " Brand " + getBrand()
-                + " Modello " + getModel()
-                + " Codice seriale " + getSerialCode()
-                + " Anno di rilascio " + getReleseYear()
-                + " Versione os " + getOsVersion()
-                + " Resistenza all'acqua " + isWaterproof
-                + " Resistenza agli urti " + isRugged;
+                + "\nModello " + getModel()
+                + "\nCodice seriale " + getSerialCode()
+                + "\nAnno di rilascio " + getReleseYear()
+                + "\nVersione os " + getOsVersion()
+                + "\nResistenza all'acqua " + isWaterproof
+                + "\nResistenza agli urti " + isRugged;
     }
 }

@@ -19,9 +19,9 @@ public class Film extends Media {
     @Override
     public String toString() {
         return "ID" + getId()
-                + " Nome " + getName()
-                + " Genere " + getGenre()
-                + " Durata" + duration
-                + " Anno di uscita " + getReleseYear();
+                + "\nNome " + getName()
+                + "\nGenere " + getGenre()
+                + "\nDurata" + duration
+                + "\nAnno di uscita " + getReleseYear();
     }
 }
