@@ -45,7 +45,7 @@ public class AdressBook {
         }
         return null;
 
-        /*
+        /* Metodo tramite ciclo for
          * for (User user : contatti) {
          * if (user.equals(searchableuser)) {
          * return user.getNumber();
