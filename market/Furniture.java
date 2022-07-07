@@ -62,6 +62,6 @@ public class Furniture implements Article {
     @Override
     public String toString() {
         return "Nome " + name + " Prezzo " + price +
-                " Altezza [" + height + "] || Lunghezza [" + width + "] || Profondita [" + deep + "]";
+                " || Altezza [" + height + "] || Lunghezza [" + width + "] || Profondita [" + deep + "]";
     }
 }

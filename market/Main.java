@@ -15,7 +15,7 @@ public class Main {
         System.out.println(catalogFurniture);
 
         System.out.println("\n ========= Prezzi sotto una certa soglia ================");
-        System.out.println(catalogFurniture.getArticleCatalogUnderPrice(100.00));
+        System.out.println(catalogFurniture.getArticleCatalogUnderPrice(400.00));
     }
 
 }
