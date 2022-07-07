@@ -1,7 +1,5 @@
 package contact.core;
 
-import java.util.*;
-
 public class User {
     private String name;
     private String surname;
