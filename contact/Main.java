@@ -36,5 +36,6 @@ public class Main {
 
         // Restituisce la lunghezza della rubrica
         System.out.println(adBook.lenghtBook());
+
     }
 }
